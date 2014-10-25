@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Vaisseaux">
+      <UniqueIdentifier>{a6136214-26c8-460d-b9e8-1e8752985a6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Engine">
+      <UniqueIdentifier>{eeb7c7bc-de9b-45b6-90f9-9b091cd185cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Libs">
+      <UniqueIdentifier>{fad3f761-b5bd-4396-9b51-aa019eb08bfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Plateau">
+      <UniqueIdentifier>{517765c9-bac1-4361-8689-50239091454d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Joueur">
+      <UniqueIdentifier>{fb96b58d-6aad-43fe-a246-8eec6e787d05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Vaisseaux">
+      <UniqueIdentifier>{37f9aff7-8ee2-41dc-9de4-589876a5b8b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Engine">
+      <UniqueIdentifier>{b39c0d07-2624-49ff-9b40-7dda5c7f0500}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Libs">
+      <UniqueIdentifier>{431d8213-26e8-4684-956c-c2313cc8eb0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Joueur">
+      <UniqueIdentifier>{ad082148-2d19-46ee-9a99-a9830fb6277d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Plateau">
+      <UniqueIdentifier>{410e2fcf-331b-4cb9-9c93-d028188b5cfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Missiles">
+      <UniqueIdentifier>{d8e439ec-7b1e-4c0c-9f2d-3e2c40a00759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Missiles">
+      <UniqueIdentifier>{54d1cb0f-2bc8-42b6-9995-81b66ad1da75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Ennemis">
+      <UniqueIdentifier>{43246840-1072-4a7b-8a1a-3b09ca5497a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Ennemis">
+      <UniqueIdentifier>{9d28929c-35c3-4496-b34f-bacfa4782a02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Vague">
+      <UniqueIdentifier>{c6aaea11-4766-4701-a256-98df6a4ed29c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Vague">
+      <UniqueIdentifier>{190cade0-eb1c-4222-bcc8-d94145627780}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Starfighter.h">
+      <Filter>Fichiers d%27en-tête\Vaisseaux</Filter>
+    </ClInclude>
+    <ClInclude Include="Spaceship.h">
+      <Filter>Fichiers d%27en-tête\Vaisseaux</Filter>
+    </ClInclude>
+    <ClInclude Include="Deathstar.h">
+      <Filter>Fichiers d%27en-tête\Vaisseaux</Filter>
+    </ClInclude>
+    <ClInclude Include="Xwing.h">
+      <Filter>Fichiers d%27en-tête\Vaisseaux</Filter>
+    </ClInclude>
+    <ClInclude Include="MyGraphicEngine.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="MyControlEngine.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="MyGameEngine.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>Fichiers d%27en-tête\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="LibConstants.h">
+      <Filter>Fichiers d%27en-tête\Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="Square.h">
+      <Filter>Fichiers d%27en-tête\Plateau</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Fichiers d%27en-tête\Joueur</Filter>
+    </ClInclude>
+    <ClInclude Include="Missile.h">
+      <Filter>Fichiers d%27en-tête\Missiles</Filter>
+    </ClInclude>
+    <ClInclude Include="MissileLeger.h">
+      <Filter>Fichiers d%27en-tête\Missiles</Filter>
+    </ClInclude>
+    <ClInclude Include="MissileMoyen.h">
+      <Filter>Fichiers d%27en-tête\Missiles</Filter>
+    </ClInclude>
+    <ClInclude Include="MissileLourd.h">
+      <Filter>Fichiers d%27en-tête\Missiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Arcadia.h">
+      <Filter>Fichiers d%27en-tête\Vaisseaux</Filter>
+    </ClInclude>
+    <ClInclude Include="Asteroide.h">
+      <Filter>Fichiers d%27en-tête\Ennemis</Filter>
+    </ClInclude>
+    <ClInclude Include="Eros.h">
+      <Filter>Fichiers d%27en-tête\Ennemis</Filter>
+    </ClInclude>
+    <ClInclude Include="Hypnos.h">
+      <Filter>Fichiers d%27en-tête\Ennemis</Filter>
+    </ClInclude>
+    <ClInclude Include="Icare.h">
+      <Filter>Fichiers d%27en-tête\Ennemis</Filter>
+    </ClInclude>
+    <ClInclude Include="Wave.h">
+      <Filter>Fichiers d%27en-tête\Vague</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Deathstar.cpp">
+      <Filter>Fichiers sources\Vaisseaux</Filter>
+    </ClCompile>
+    <ClCompile Include="Xwing.cpp">
+      <Filter>Fichiers sources\Vaisseaux</Filter>
+    </ClCompile>
+    <ClCompile Include="Starfighter.cpp">
+      <Filter>Fichiers sources\Vaisseaux</Filter>
+    </ClCompile>
+    <ClCompile Include="Spaceship.cpp">
+      <Filter>Fichiers sources\Vaisseaux</Filter>
+    </ClCompile>
+    <ClCompile Include="MyControlEngine.cpp">
+      <Filter>Fichiers sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="MyGameEngine.cpp">
+      <Filter>Fichiers sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="MyGraphicEngine.cpp">
+      <Filter>Fichiers sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Fichiers sources\Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Fichiers sources\Joueur</Filter>
+    </ClCompile>
+    <ClCompile Include="Square.cpp">
+      <Filter>Fichiers sources\Plateau</Filter>
+    </ClCompile>
+    <ClCompile Include="Missile.cpp">
+      <Filter>Fichiers sources\Missiles</Filter>
+    </ClCompile>
+    <ClCompile Include="MissileLeger.cpp">
+      <Filter>Fichiers sources\Missiles</Filter>
+    </ClCompile>
+    <ClCompile Include="MissileLourd.cpp">
+      <Filter>Fichiers sources\Missiles</Filter>
+    </ClCompile>
+    <ClCompile Include="MissileMoyen.cpp">
+      <Filter>Fichiers sources\Missiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Arcadia.cpp">
+      <Filter>Fichiers sources\Vaisseaux</Filter>
+    </ClCompile>
+    <ClCompile Include="Asteroide.cpp">
+      <Filter>Fichiers sources\Ennemis</Filter>
+    </ClCompile>
+    <ClCompile Include="Eros.cpp">
+      <Filter>Fichiers sources\Ennemis</Filter>
+    </ClCompile>
+    <ClCompile Include="Hypnos.cpp">
+      <Filter>Fichiers sources\Ennemis</Filter>
+    </ClCompile>
+    <ClCompile Include="Icare.cpp">
+      <Filter>Fichiers sources\Ennemis</Filter>
+    </ClCompile>
+    <ClCompile Include="Wave.cpp">
+      <Filter>Fichiers sources\Vague</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>

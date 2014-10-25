@@ -1,0 +1,12 @@
+﻿La génération a démarré 25/10/2014 23:36:49.
+     1>Projet "C:\Users\law\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\StarWarsDefense\StarWarsDefense.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\law\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\uselibgraph\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /FR"Release\\" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>C:\Users\law\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\uselibgraph\include\Stopwatch.h(14): error C3861: 'gettimeofday' : identificateur introuvable
+     1>C:\Users\law\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\uselibgraph\include\Stopwatch.h(18): error C3861: 'gettimeofday' : identificateur introuvable
+     1>Génération du projet "C:\Users\law\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\StarWarsDefense\StarWarsDefense.vcxproj" terminée (Build cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+Temps écoulé 00:00:01.12
