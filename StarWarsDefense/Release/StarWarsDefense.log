@@ -1,12 +1,42 @@
-﻿La génération a démarré 25/10/2014 23:36:49.
-     1>Projet "C:\Users\law\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\StarWarsDefense\StarWarsDefense.vcxproj" sur le nœud 2 (Build cible(s)).
+﻿La génération a démarré 29/10/2014 09:31:48.
+     1>Projet "C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\StarWarsDefense\StarWarsDefense.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\law\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\uselibgraph\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /FR"Release\\" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\uselibgraph\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /FR"Release\\" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-     1>C:\Users\law\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\uselibgraph\include\Stopwatch.h(14): error C3861: 'gettimeofday' : identificateur introuvable
-     1>C:\Users\law\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\uselibgraph\include\Stopwatch.h(18): error C3861: 'gettimeofday' : identificateur introuvable
-     1>Génération du projet "C:\Users\law\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\StarWarsDefense\StarWarsDefense.vcxproj" terminée (Build cible(s)) -- ÉCHEC.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\Release\StarWarsDefense.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\uselibgraph\libWin" engine.lib glut32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\Release\StarWarsDefense.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\Release\StarWarsDefense.lib" /MACHINE:X86 /SAFESEH Release\Arcadia.obj
+         Release\Asteroide.obj
+         Release\Deathstar.obj
+         Release\Eros.obj
+         Release\Hypnos.obj
+         Release\Icare.obj
+         Release\main.obj
+         Release\Missile.obj
+         Release\MissileLeger.obj
+         Release\MissileLourd.obj
+         Release\MissileMoyen.obj
+         Release\MyControlEngine.obj
+         Release\MyGameEngine.obj
+         Release\MyGraphicEngine.obj
+         Release\Player.obj
+         Release\Spaceship.obj
+         Release\Square.obj
+         Release\Starfighter.obj
+         Release\Utility.obj
+         Release\Wave.obj
+         Release\Xwing.obj
+         Génération de code en cours
+         Fin de la génération du code
+     1>engine.lib(GraphicPrimitives.obj) : warning LNK4204: 'C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\Release\vc120.pdb' n'a pas d'informations de débogage pour référencer le module ; édition de liens des objets comme s'il n'y avait aucune information de débogage
+     1>engine.lib(Engine.obj) : warning LNK4204: 'C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\Release\vc120.pdb' n'a pas d'informations de débogage pour référencer le module ; édition de liens des objets comme s'il n'y avait aucune information de débogage
+     1>engine.lib(GameEngine.obj) : warning LNK4204: 'C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\Release\vc120.pdb' n'a pas d'informations de débogage pour référencer le module ; édition de liens des objets comme s'il n'y avait aucune information de débogage
+     1>engine.lib(ControlEngine.obj) : warning LNK4204: 'C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\Release\vc120.pdb' n'a pas d'informations de débogage pour référencer le module ; édition de liens des objets comme s'il n'y avait aucune information de débogage
+     1>engine.lib(GraphicEngine.obj) : warning LNK4204: 'C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\Release\vc120.pdb' n'a pas d'informations de débogage pour référencer le module ; édition de liens des objets comme s'il n'y avait aucune information de débogage
+         StarWarsDefense.vcxproj -> C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\Release\StarWarsDefense.exe
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o"C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\Release\StarWarsDefense.bsc" /n Release\Arcadia.sbr Release\Asteroide.sbr Release\Deathstar.sbr Release\Eros.sbr Release\Hypnos.sbr Release\Icare.sbr Release\main.sbr Release\Missile.sbr Release\MissileLeger.sbr Release\MissileLourd.sbr Release\MissileMoyen.sbr Release\MyControlEngine.sbr Release\MyGameEngine.sbr Release\MyGraphicEngine.sbr Release\Player.sbr Release\Spaceship.sbr Release\Square.sbr Release\Starfighter.sbr Release\Utility.sbr Release\Wave.sbr Release\Xwing.sbr
+     1>Génération du projet "C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\StarWarsDefense\StarWarsDefense.vcxproj" terminée (Build cible(s)).
 
-ÉCHEC de la build.
+La génération a réussi.
 
-Temps écoulé 00:00:01.12
+Temps écoulé 00:00:10.74

@@ -12,7 +12,6 @@
 #include "Missile.h"
 #include "Asteroide.h"
 #include "Wave.h"
-#include "Stopwatch.h"
 
 int main(int argc, char * argv[])
 {
@@ -26,8 +25,7 @@ int main(int argc, char * argv[])
 	Player player;
 
 	Wave wave_;
-	Stopwatch watcher;
-	watcher.stop();
+	
 	for (int ligne = 0; ligne < LibConstants::NB_SQUARE; ligne++)
 	{
 		//création des lignes vide
