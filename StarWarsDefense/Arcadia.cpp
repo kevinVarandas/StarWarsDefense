@@ -7,9 +7,8 @@ Arcadia::Arcadia(float posX, float posY, int line, int column) : Spaceship(posX,
 	blue_ = 30.0f / 255.0f;
 	damageImpact_ = 120;
 	price_ = LibConstants::PRICE_ARCADIA;
-	cadence_ = 500;
+	cadence_ = 1800;
 	id_ = LibConstants::ID_ARCADIA;
-	frequence_ = 0;
 }
 
 

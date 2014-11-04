@@ -54,28 +54,29 @@ void MyGraphicEngine::Draw(){
 			(*spaceships_)[i]->draw();
 			if ((*spaceships_)[i]->getId() == LibConstants::ID_XWING && (*spaceships_)[i]->isReadyToFire())
 			{
-				(*missiles_).push_back(new MissileLeger((*spaceships_)[i]->getX() + 0.01f, (*spaceships_)[i]->getY()));
+				(*missiles_).push_back(new MissileLeger((*spaceships_)[i]->getX(), (*spaceships_)[i]->getY()));
 			}
 			else if ((*spaceships_)[i]->getId() == LibConstants::ID_STARFIGHTER && (*spaceships_)[i]->isReadyToFire())
 			{
-				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX() + 0.01f, (*spaceships_)[i]->getY()+0.02f));
-				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX() + 0.01f, (*spaceships_)[i]->getY()- 0.02f));
+				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX(), (*spaceships_)[i]->getY() + 0.02f));
+				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX(), (*spaceships_)[i]->getY() - 0.02f));
 			}
 			else if ((*spaceships_)[i]->getId() == LibConstants::ID_ARCADIA && (*spaceships_)[i]->isReadyToFire())
 			{
-				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX() + 0.01f, (*spaceships_)[i]->getY() + 0.02f, 0.001f, (*spaceships_)[i]->getRed(), (*spaceships_)[i]->getGreen(), (*spaceships_)[i]->getBlue()));
-				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX() + 0.01f, (*spaceships_)[i]->getY() + 0.02f,0.0f, (*spaceships_)[i]->getRed(), (*spaceships_)[i]->getGreen(), (*spaceships_)[i]->getBlue()));
-				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX() + 0.01f, (*spaceships_)[i]->getY() - 0.02f,0.0f, (*spaceships_)[i]->getRed(), (*spaceships_)[i]->getGreen(), (*spaceships_)[i]->getBlue()));
-				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX() + 0.01f, (*spaceships_)[i]->getY() - 0.02f, -0.001f, (*spaceships_)[i]->getRed(), (*spaceships_)[i]->getGreen(), (*spaceships_)[i]->getBlue()));
+				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX(), (*spaceships_)[i]->getY() + 0.02f, 0.001f, (*spaceships_)[i]->getRed(), (*spaceships_)[i]->getGreen(), (*spaceships_)[i]->getBlue()));
+				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX(), (*spaceships_)[i]->getY() + 0.02f, 0.0f, (*spaceships_)[i]->getRed(), (*spaceships_)[i]->getGreen(), (*spaceships_)[i]->getBlue()));
+				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX(), (*spaceships_)[i]->getY() - 0.02f, 0.0f, (*spaceships_)[i]->getRed(), (*spaceships_)[i]->getGreen(), (*spaceships_)[i]->getBlue()));
+				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX(), (*spaceships_)[i]->getY() - 0.02f, -0.001f, (*spaceships_)[i]->getRed(), (*spaceships_)[i]->getGreen(), (*spaceships_)[i]->getBlue()));
 			}
 			else if ((*spaceships_)[i]->getId() == LibConstants::ID_DEATHSTAR && (*spaceships_)[i]->isReadyToFire())
 			{
-				(*missiles_).push_back(new MissileLourd((*spaceships_)[i]->getX() + 0.01f, (*spaceships_)[i]->getY()));
+				(*missiles_).push_back(new MissileLourd((*spaceships_)[i]->getX(), (*spaceships_)[i]->getY()));
 			}
 		}
 		//Affichage et suppression des missiles
 		for (int i = 0; i < (int)missiles_->size(); i++)
 		{
+			// Missile sort du cadre
 			if ((*missiles_)[i]->getHitBoxTop() >= 1.0f ||
 				(*missiles_)[i]->getHitBoxLeft() >= 1.0f ||
 				(*missiles_)[i]->getHitBoxBottom() <= (*squares_)[0][0].getY())
@@ -85,12 +86,15 @@ void MyGraphicEngine::Draw(){
 			}
 			else
 			{
+				//dessine le missile
 				(*missiles_)[i]->draw();
 				for (int j = 0; j < (*wave_).getSize(); j++)
 				{
-					if ((*missiles_)[i]->hitAsteroid((*wave_).getAsteroide(j)))
+					//Vérif si ça touche un astéroide
+					if ((*missiles_)[i] != nullptr && (*wave_).getAsteroide(j) != nullptr && (*missiles_)[i]->hitAsteroid((*wave_).getAsteroide(j)))
 					{
 						int lifeAfterImpact = (*wave_).getAsteroide(j)->getLife() - (*missiles_)[i]->getDamage();
+						//Si astéroide plus de vie
 						if ( lifeAfterImpact <= 0)
 						{
 							(*player_).updateMoney((*wave_).getAsteroide(j)->getMoneyWhenExplosed());
@@ -98,19 +102,24 @@ void MyGraphicEngine::Draw(){
 							(*wave_).incNumberOfAsteroideDestroyed();
 							delete (*wave_).getAsteroide(j);
 							(*wave_).deleteAsteroide(j);
+
+							if ((*wave_).isEmpty())
+								(*wave_).resetChrono();
 						}
 						else
 						{
 							(*wave_).getAsteroide(j)->setLife(lifeAfterImpact);
 						}
+						//Dans tous les cas delete des missiles
 						delete (*missiles_)[i];
+						(*missiles_)[i] = nullptr;
 						missiles_->erase(missiles_->begin() + i);
 					}
 				}
 			}
 		}
 		// FreezeTime avant le début de la vague
-		if ((*wave_).isReadyToGo() && (*wave_).isEmpty())
+		if ((*wave_).isReadyToGo() && (*wave_).isEmpty() && !(*wave_).isActive())
 		{
 			(*wave_).setActive();
 			(*wave_).levelUp();
@@ -128,6 +137,7 @@ void MyGraphicEngine::Draw(){
 				if ((*wave_).isReadyToPopAsteroide())
 				{
 					(*wave_).addAsteroide(squares_);
+					(*wave_).resetChronoAsteroidePop();
 				}
 			}
 			else
@@ -148,6 +158,9 @@ void MyGraphicEngine::Draw(){
 					(*player_).addImpact();
 					delete (*wave_).getAsteroide(i);
 					(*wave_).deleteAsteroide(i);
+
+					if ((*wave_).isEmpty())
+						(*wave_).resetChrono();
 				}
 				else
 				{
@@ -156,7 +169,7 @@ void MyGraphicEngine::Draw(){
 
 					for (int j = 0; j < (int)spaceships_->size(); j++)
 					{
-						if ((*wave_).getAsteroide(i)->hitSpaceship((*spaceships_)[j]))
+						if ((*wave_).getAsteroide(i) != nullptr && (*spaceships_)[j] != nullptr && (*wave_).getAsteroide(i)->hitSpaceship((*spaceships_)[j]))
 						{
 							int lifeAsteroideAfterImpact = (*wave_).getAsteroide(i)->getLife() - (*spaceships_)[j]->getDamageImpact();
 							if (lifeAsteroideAfterImpact <= 0)
@@ -164,6 +177,8 @@ void MyGraphicEngine::Draw(){
 								(*wave_).incNumberOfAsteroideDestroyed();
 								delete (*wave_).getAsteroide(i);
 								(*wave_).deleteAsteroide(i);
+								if ((*wave_).isEmpty())
+									(*wave_).resetChrono();
 							}
 							else
 							{
@@ -171,6 +186,7 @@ void MyGraphicEngine::Draw(){
 							}
 							(*squares_)[(*spaceships_)[j]->getLine()][(*spaceships_)[j]->getColumn()].restoreCptClick();
 							delete (*spaceships_)[j];
+							(*spaceships_)[j] = nullptr;
 							spaceships_->erase(spaceships_->begin() + j);
 						}
 					}

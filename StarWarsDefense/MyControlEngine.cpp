@@ -10,7 +10,6 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 
 		int i = (int)(posX / LibConstants::SQUARE_POS);
 		int j = (int)(posY / LibConstants::SQUARE_POS);
-		std::cout << " i " << i << " et j " << j << std::endl;
 		if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN)
 		{
 			if (x >= (LibConstants::windowsWidth / 2 * LibConstants::SQUARE_SIZE) &&
@@ -58,15 +57,19 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 		}
 		else if (button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN)
 		{
-			for (int k = 0; k < (int)spaceships_->size(); k++)
+			if (x >= (LibConstants::windowsWidth / 2 * LibConstants::SQUARE_SIZE) &&
+				y <= (LibConstants::windowsHeight - LibConstants::windowsHeight / 2 * LibConstants::SQUARE_SIZE))
 			{
-				if ((*spaceships_)[k]->getLine() == i && (*spaceships_)[k]->getColumn() == j)
+				for (int k = 0; k < (int)spaceships_->size(); k++)
 				{
-					(*squares_)[(*spaceships_)[k]->getLine()][(*spaceships_)[k]->getColumn()].restoreCptClick();
-					(*player_).updateMoney((*spaceships_)[k]->getPrice()/2);
+					if ((*spaceships_)[k]->getLine() == i && (*spaceships_)[k]->getColumn() == j)
+					{
+						(*squares_)[(*spaceships_)[k]->getLine()][(*spaceships_)[k]->getColumn()].restoreCptClick();
+						(*player_).updateMoney((*spaceships_)[k]->getPrice()/2);
 
-					delete (*spaceships_)[k];
-					spaceships_->erase(spaceships_->begin() + k);
+						delete (*spaceships_)[k];
+						spaceships_->erase(spaceships_->begin() + k);
+					}
 				}
 			}
 		}

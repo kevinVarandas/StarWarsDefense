@@ -1,7 +1,12 @@
-﻿La génération a démarré 29/10/2014 09:31:48.
+﻿La génération a démarré 04/11/2014 16:18:08.
      1>Projet "C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\StarWarsDefense\StarWarsDefense.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\uselibgraph\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /FR"Release\\" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\uselibgraph\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /FR"Release\\" /Gd /TP /analyze- /errorReport:prompt MyControlEngine.cpp MyGameEngine.cpp MyGraphicEngine.cpp Spaceship.cpp Wave.cpp main.cpp
+         MyControlEngine.cpp
+         MyGameEngine.cpp
+         MyGraphicEngine.cpp
+         Spaceship.cpp
+         Wave.cpp
          main.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\Release\StarWarsDefense.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\uselibgraph\libWin" engine.lib glut32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\Release\StarWarsDefense.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\kevin\Desktop\Cours\MASTER 1 INFO\C++\TPC++\Cpp\StarWarsDefense\Release\StarWarsDefense.lib" /MACHINE:X86 /SAFESEH Release\Arcadia.obj
@@ -39,4 +44,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:10.74
+Temps écoulé 00:00:21.12

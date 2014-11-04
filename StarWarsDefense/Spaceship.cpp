@@ -24,8 +24,12 @@ void Spaceship::drawPrice()
 
 bool Spaceship::isReadyToFire()
 {
-	bool fire = frequence_%cadence_ == 0;
-	frequence_ = (frequence_ + 1) % cadence_;
+	std::chrono::system_clock::time_point tPopNow = std::chrono::high_resolution_clock::now();
 
-	return fire;
+	if (std::chrono::duration_cast<std::chrono::milliseconds>(tPopNow - tStart_).count() >= cadence_)
+	{
+		tStart_ = std::chrono::high_resolution_clock::now();
+		return true;
+	}
+	return false;
 }

@@ -2,6 +2,7 @@
 #include "Spaceship.h"
 #include "GraphicPrimitives.h"
 #include "Utility.h"
+#include <chrono>
 
 class Asteroide
 {
@@ -14,6 +15,8 @@ protected:
 	float red_, green_, blue_;
 	int damageImpact_;
 	int life_, freezeTime_, frequency_, moneyWhenExplosed_, scoreWhenExplosed_;
+
+	std::chrono::system_clock::time_point tStart_;
 	
 public:
 	Asteroide(float posX, float posY, float red = 1.0f, float green = 1.0f, float blue = 1.0f);

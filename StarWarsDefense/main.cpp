@@ -25,6 +25,8 @@ int main(int argc, char * argv[])
 	Player player;
 
 	Wave wave_;
+
+	srand(time(NULL));
 	
 	for (int ligne = 0; ligne < LibConstants::NB_SQUARE; ligne++)
 	{

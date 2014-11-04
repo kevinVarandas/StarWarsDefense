@@ -1,8 +1,9 @@
 #include "Wave.h"
 
 
-Wave::Wave() :level_(0), frequency_(1), freezeTime_(2000), waveActive_(false),
-numberOfAsteroide_(0), cadencePop_(1), frequencePop_(0), asteroideDestroyed_(0){}
+Wave::Wave() :level_(0), freezeTime_(5000), waveActive_(false),
+numberOfAsteroide_(0), frequencePop_(0), asteroideDestroyed_(0),
+firstTick_(false), firstAsteroide_(true){}
 
 Wave::~Wave(){}
 
@@ -53,10 +54,23 @@ void Wave::addAsteroide(std::vector<std::vector<Square> > *squares)
 
 bool Wave::isReadyToGo()
 {
-	bool fire = frequency_%freezeTime_== 0;
-	frequency_ = (frequency_ + 1) % freezeTime_;
+	if (!firstTick_)
+	{
+		tStart_ = std::chrono::high_resolution_clock::now();
+		firstTick_ = true;
+	}
 
-	return fire;
+	std::chrono::system_clock::time_point tNow = std::chrono::high_resolution_clock::now();
+	if (std::chrono::duration_cast<std::chrono::milliseconds>(tNow - tStart_).count() >= freezeTime_)
+	{
+		if (firstAsteroide_)
+		{
+			startAsteroidePop_ = std::chrono::high_resolution_clock::now();
+			firstAsteroide_ = false;
+		}
+		return true;
+	}
+	return false;
 }
 
 bool Wave::isReadyToPopAsteroide()
@@ -70,10 +84,8 @@ bool Wave::isReadyToPopAsteroide()
 	else if (level_ >= 15)
 		frequencePop_ = 600;
 
-	bool ready = cadencePop_%frequencePop_ == 0;
-	cadencePop_ = cadencePop_ + 1 % frequencePop_;
-
-	return ready;
+	std::chrono::system_clock::time_point tPopNow = std::chrono::high_resolution_clock::now();
+	return std::chrono::duration_cast<std::chrono::milliseconds>(tPopNow - startAsteroidePop_).count() >= frequencePop_;
 }
 
 void Wave::drawNumberOfAsteroide()

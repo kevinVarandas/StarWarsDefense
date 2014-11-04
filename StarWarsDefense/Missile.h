@@ -20,8 +20,8 @@ public:
 	virtual float getPosY(){ return posY_; }
 
 	float getHitBoxBottom(){ return posY_ - (height_ / 2); }
-	float getHitBoxRight(){ return posX_ + width_; }
-	float getHitBoxLeft(){ return posX_; }
+	float getHitBoxRight(){ return posX_; }
+	float getHitBoxLeft(){ return posX_ - width_; }
 	float getHitBoxTop(){ return posY_ + (height_ / 2); }
 
 	int getDamage(){ return damage_; }

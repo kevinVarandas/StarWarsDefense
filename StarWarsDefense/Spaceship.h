@@ -2,14 +2,18 @@
 #include "GraphicPrimitives.h"
 #include "Utility.h"
 #include "LibConstants.h"
+#include <chrono>
+
 class Spaceship
 {
 protected:
 	float posX_, posY_;
 	float red_, green_, blue_;
-	int damageImpact_, price_, cadence_, frequence_, id_;
+	int damageImpact_, price_, cadence_, id_;
 
 	int line_, column_;
+
+	std::chrono::system_clock::time_point tStart_;
 
 public:
 	Spaceship(float posX, float posY, int line, int column);

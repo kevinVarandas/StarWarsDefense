@@ -7,9 +7,8 @@ Deathstar::Deathstar(float posX, float posY, int line, int column) : Spaceship(p
 	blue_ = 0.0f;
 	damageImpact_ = 100;
 	price_ = LibConstants::PRICE_DEATHSTAR;
-	cadence_ = 1000;
+	cadence_ = 3000;
 	id_ = LibConstants::ID_DEATHSTAR;
-	frequence_ = 0;
 }
 
 

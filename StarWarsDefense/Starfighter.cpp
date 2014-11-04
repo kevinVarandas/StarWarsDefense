@@ -8,9 +8,8 @@ Starfighter::Starfighter(float posX, float posY, int line, int column) : Spacesh
 	blue_ = 0.0f / 255.0f;
 	damageImpact_ = 100;
 	price_ = LibConstants::PRICE_STARFIGHTER;
-	cadence_ = 400;
+	cadence_ = 1500;
 	id_ = LibConstants::ID_STARFIGHTER;
-	frequence_ = 0;
 }
 
 
