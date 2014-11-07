@@ -8,7 +8,7 @@ Xwing::Xwing(float posX, float posY, int line, int column) : Spaceship(posX, pos
 	blue_ = 255.0f / 255.0f;
 	damageImpact_ = 50;
 	price_ = LibConstants::PRICE_XWING;
-	cadence_ = 600;
+	cadence_ = 500;
 	id_ = LibConstants::ID_XWING;
 }
 

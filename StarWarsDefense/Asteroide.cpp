@@ -24,13 +24,5 @@ void Asteroide::drawVita()
 bool Asteroide::hitSpaceship(Spaceship *s)
 {
 	return getHitBoxLeft() <= s->getX() && getHitBoxTop() <= s->getHitBoxTop()
-		&& getHitBoxBottom() >= s->getHitBoxBottom() && getHitBoxRight() >= s->getX()-(4*LibConstants::SQUARE_POS/5);
-}
-
-bool Asteroide::isReadyToGo()
-{
-	bool go = frequency_%freezeTime_== 0;
-	frequency_ = (frequency_ + 1) % freezeTime_;
-
-	return go;
+		&& getHitBoxBottom() >= s->getHitBoxBottom() && getHitBoxRight() >= (s->getX() - (4*LibConstants::SQUARE_POS/5));
 }

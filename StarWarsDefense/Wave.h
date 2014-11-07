@@ -36,7 +36,7 @@ public:
 		asteroides_.erase(asteroides_.begin() + i); 
 	}
 	int getNumberOfAsteroide(){ return numberOfAsteroide_; }
-	int getMaxAsteroide(){ return level_ * 4; }
+	int getMaxAsteroide();
 	void resetNumberOfAsteroide(){ numberOfAsteroide_ = 0; }
 	void levelUp(){ level_++; }
 	bool isEmpty(){ return asteroides_.empty(); }

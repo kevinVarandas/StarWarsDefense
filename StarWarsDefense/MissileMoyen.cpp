@@ -5,7 +5,7 @@ MissileMoyen::MissileMoyen(float posX, float posY, float VposY, float red, float
 {
 	width_ = 0.04;
 	height_ = 0.04;
-	VposX_ = 0.008f;
+	VposX_ = 0.022f;
 	damage_ = 15;
 	id_ = 2;
 }

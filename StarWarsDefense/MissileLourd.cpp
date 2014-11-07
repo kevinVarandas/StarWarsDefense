@@ -5,7 +5,7 @@ MissileLourd::MissileLourd(float posX, float posY, float r, float g, float b) : 
 {
 	width_ = 0.08f;
 	height_ = 0.06f;
-	VposX_ = 0.006f,
+	VposX_ = 0.012f,
 	VposY_ = 0.0f,
 	damage_ = 150;
 	id_ = 4;

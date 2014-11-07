@@ -1,7 +1,7 @@
 #include "Player.h"
 
 
-Player::Player() : money_(250), selectedSpaceship_(0), score_(0), nbImpact_(0), seenHowToPlay_(false) {}
+Player::Player() : money_(300), selectedSpaceship_(0), score_(0), nbImpact_(0), seenHowToPlay_(false) {}
 
 Player::~Player(){}
 
@@ -108,7 +108,7 @@ void Player::drawReadMe()
 	text = "Si 4 asteroides heurtent le bord gauche de la grille, vous perdez la partie.";
 	GraphicPrimitives::drawText2D(text, -0.90f, 0.00f, 1.0f, 1.0f, 1.0f);
 
-	text = "Chaque vague possede 4 asteroides de plus que la precedente.";
+	text = "A chaque vague, le nombre d ' asteroides augmentera !";
 	GraphicPrimitives::drawText2D(text, -0.90f, -0.10f, 1.0f, 1.0f, 1.0f);
 
 	text = "Le numero de vague est affiche en haut a gauche de la fenetre !";
@@ -138,7 +138,7 @@ void Player::addBonusEndOfWave(int level)
 	if (level > 1 && level < 5)
 		money_ += 25;
 	else if (level >= 5 && level < 10)
-		money_ += 100;
+		money_ += 50;
 	else if (level >= 10)
-		money_ += 125;
+		money_ += 75;
 }

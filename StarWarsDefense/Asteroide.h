@@ -13,8 +13,7 @@ protected:
 	float width_, height_;
 	
 	float red_, green_, blue_;
-	int damageImpact_;
-	int life_, freezeTime_, frequency_, moneyWhenExplosed_, scoreWhenExplosed_;
+	int life_, moneyWhenExplosed_, scoreWhenExplosed_;
 
 	std::chrono::system_clock::time_point tStart_;
 	
@@ -36,8 +35,6 @@ public:
 	float getHitBoxTop(){ return posY_ + (height_ / 2); }
 	float getHitBoxLeft(){ return posX_; }
 	float getHitBoxRight(){ return posX_ + width_; }
-	int getDamageImpact(){ return damageImpact_; }
 	int getMoneyWhenExplosed(){ return moneyWhenExplosed_; }
-	bool isReadyToGo();
 };
 

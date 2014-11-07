@@ -63,10 +63,10 @@ void MyGraphicEngine::Draw(){
 			}
 			else if ((*spaceships_)[i]->getId() == LibConstants::ID_ARCADIA && (*spaceships_)[i]->isReadyToFire())
 			{
-				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX(), (*spaceships_)[i]->getY() + 0.02f, 0.001f, (*spaceships_)[i]->getRed(), (*spaceships_)[i]->getGreen(), (*spaceships_)[i]->getBlue()));
+				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX(), (*spaceships_)[i]->getY() + 0.02f, 0.004f, (*spaceships_)[i]->getRed(), (*spaceships_)[i]->getGreen(), (*spaceships_)[i]->getBlue()));
 				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX(), (*spaceships_)[i]->getY() + 0.02f, 0.0f, (*spaceships_)[i]->getRed(), (*spaceships_)[i]->getGreen(), (*spaceships_)[i]->getBlue()));
 				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX(), (*spaceships_)[i]->getY() - 0.02f, 0.0f, (*spaceships_)[i]->getRed(), (*spaceships_)[i]->getGreen(), (*spaceships_)[i]->getBlue()));
-				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX(), (*spaceships_)[i]->getY() - 0.02f, -0.001f, (*spaceships_)[i]->getRed(), (*spaceships_)[i]->getGreen(), (*spaceships_)[i]->getBlue()));
+				(*missiles_).push_back(new MissileMoyen((*spaceships_)[i]->getX(), (*spaceships_)[i]->getY() - 0.02f, -0.004f, (*spaceships_)[i]->getRed(), (*spaceships_)[i]->getGreen(), (*spaceships_)[i]->getBlue()));
 			}
 			else if ((*spaceships_)[i]->getId() == LibConstants::ID_DEATHSTAR && (*spaceships_)[i]->isReadyToFire())
 			{

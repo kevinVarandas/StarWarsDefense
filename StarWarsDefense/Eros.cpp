@@ -3,15 +3,12 @@
 
 Eros::Eros(float posX, float posY) : Asteroide(posX,posY)
 {
-	VposX_ = 0.00043f;
+	VposX_ = 0.0018f;
 	VposY_ = 0.0f;
 	life_ = 350;
 	width_ = 0.1f;
 	height_ = 0.08f;
-	damageImpact_ = life_;
-	frequency_ = 0;
-	freezeTime_ = (rand() % 51) + 50;
-	moneyWhenExplosed_ = 40;
+	moneyWhenExplosed_ = 50;
 	scoreWhenExplosed_ = life_ / 10;
 }
 

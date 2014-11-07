@@ -15,6 +15,9 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 			if (x >= (LibConstants::windowsWidth / 2 * LibConstants::SQUARE_SIZE) &&
 				y <= (LibConstants::windowsHeight - LibConstants::windowsHeight / 2 * LibConstants::SQUARE_SIZE))
 			{
+	/*
+				if ((*squares_)[i][j].getCptClick() < 1 && i < 5 )
+	*/
 				if ((*squares_)[i][j].getCptClick() < 1 && i < 5 && (*player_).hasEnoughMoney())
 				{
 					(*squares_)[i][j].incCptClick();

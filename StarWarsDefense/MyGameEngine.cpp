@@ -7,7 +7,7 @@ void MyGameEngine::idle(){
 		std::chrono::system_clock::time_point tNow = std::chrono::high_resolution_clock::now();
 		int time = std::chrono::duration_cast<std::chrono::milliseconds>(tNow - tStart_).count();
 
-		if (time >= 30)
+		if (time >= 15)
 		{
 			for (int i = 0; i <(int)missiles_->size(); i++)
 			{

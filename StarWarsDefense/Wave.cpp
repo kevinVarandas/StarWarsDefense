@@ -44,7 +44,7 @@ void Wave::addAsteroide(std::vector<std::vector<Square> > *squares)
 		asteroides_.push_back(new Icare((*squares)[9][randomCase].getX() + (*squares)[0][0].getSide(), (*squares)[0][randomCase].getY() + ((*squares)[0][0].getSide() / 2)));
 		break;
 	case 3:
-		asteroides_.push_back(new Icare((*squares)[9][randomCase].getX() + (*squares)[0][0].getSide(), (*squares)[0][randomCase].getY() + ((*squares)[0][0].getSide() / 2), 0.0008));
+		asteroides_.push_back(new Icare((*squares)[9][randomCase].getX() + (*squares)[0][0].getSide(), (*squares)[0][randomCase].getY() + ((*squares)[0][0].getSide() / 2), 0.005));
 		break;
 	default:
 		break;
@@ -76,13 +76,13 @@ bool Wave::isReadyToGo()
 bool Wave::isReadyToPopAsteroide()
 {
 	if (level_ < 5)
-		frequencePop_ = 1500;
+		frequencePop_ = 3500;
 	else if (level_ >= 5 && level_ < 10)
-		frequencePop_ = 1300;
+		frequencePop_ = 3000;
 	else if (level_ >= 10 && level_ < 15)
-		frequencePop_ = 1100;
+		frequencePop_ = 2500;
 	else if (level_ >= 15)
-		frequencePop_ = 600;
+		frequencePop_ = 1800;
 
 	std::chrono::system_clock::time_point tPopNow = std::chrono::high_resolution_clock::now();
 	return std::chrono::duration_cast<std::chrono::milliseconds>(tPopNow - startAsteroidePop_).count() >= frequencePop_;
@@ -99,7 +99,21 @@ void Wave::drawNumberOfAsteroide()
 	GraphicPrimitives::drawText2D(numberOfAsteroide, x+0.28, -0.90f, 1.0f, 1.0f, 1.0f);
 	GraphicPrimitives::drawText2D(" /  ", x+0.32, -0.90f, 255 / 255.0, 216 / 255.0, 0.f);
 	GraphicPrimitives::drawText2D(maxAsteroide, x+0.35, -0.90f, 255 / 255.0, 216 / 255.0, 0.f);
-
 	delete[] numberOfAsteroide;
 	delete[] maxAsteroide;
+}
+
+int Wave::getMaxAsteroide()
+{
+	if (level_ <= 0)
+		return 0;
+	if(level_ >= 1 && level_<=3)
+		return level_ * 2 + 3;
+	if (level_ >= 4 && level_ <=10)
+		return level_ * 2 + 4;
+	if (level_ > 10 && level_ <= 15)
+		return level_ * 3;
+	if (level_ > 15)
+		return level_ * 4;
+	return 0;
 }
